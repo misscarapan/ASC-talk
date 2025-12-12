@@ -1,0 +1,33 @@
+/* Custom styles for Slidev presentation */
+
+.gasto {
+  color: #ff4444;
+  font-weight: 600;
+}
+
+.ahorro {
+  color: #44ff44;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: #718096;
+}
+
+/* Color scheme */
+h1 {
+  color: #2d3748;
+}
+
+h2 {
+  color: #667eea;
+}
+
+h3 {
+  color: #4a5568;
+}
+
+p, li {
+  color: #4a5568;
+}
+
