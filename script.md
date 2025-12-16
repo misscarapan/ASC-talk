@@ -1,18 +1,22 @@
 SCRIPT: "¿Por qué tu gasto cloud no para de subir?"
 Lightning Talk - 20 minutos
 
-1. APERTURA: "Los gastos invisibles" (2 min)
-[SLIDE: Gráfica dramática de gasto subiendo exponencialmente]
-Buenos días a todos. Levanten la mano si alguna vez han recibido un email de finanzas preguntando por qué la factura de cloud subió un 40% este mes.
-[Pausa para manos levantadas]
-Sí, todos hemos estado ahí. Y lo primero que hacemos es mirar los EC2, las RDS, los grandes servicios... pero la realidad es que no son ellos. Bueno, no solo ellos.
-[SLIDE: "No son los EC2. Son los 1000 pequeños gastos que nadie mira"]
-El verdadero problema son los gastos silenciosos. Esos que van de 50 céntimos aquí, 3 euros allá, 30 euros acullá... y cuando te das cuenta, son €10,000 al año que se han colado sin que nadie los viera venir.
-[SLIDE: "Grano a grano hace granero... y €30/día hace €10,950/año"]
-Les voy a contar una historia real: un equipo tenía 25 terabytes de imágenes en ECR. Nadie lo sabía. Nadie lo monitorizaba. Implementaron lifecycle policies, limpiaron lo que no servía... bajaron a 5TB. El ahorro: 30 euros al día. Casi 11,000 euros al año. Por algo que nadie estaba mirando.
-Hoy vamos a hablar de los cuatro jinetes del gasto silencioso. Y de cómo combatirlos.
+Soy Cristina, SRE en Ozona Tech donde mi foco es la observabilidad y Cloud FinOps, también soy Contributor en Resizes donde hacemos la plataforma agnóstica para desarrolladores, también soy una Dash believer, que es el producto de Resizes para que los desarrolladores no se preocupen por la infra y por último, soy mentora en Step4ward, una comunidad para acompañar a  mujeres en el mundo tecnológico, tanto si están empezando como si buscan un cambio. 
 
-2A. RIGHTSIZING: "Compraste un Ferrari para ir al súper" (3.5 min)
+Qué vamos a ver hoy? Pues hoy veremos esos gastos silenciosos. Cuántos de vosotros habéis visto que la factura cloud ha subido un 30% este mes? Levantar la mano 
+(pausa para manos levantadas)
+Muy bien, todos hemos estado ahí, y lo primero que hacemos es buscar instancias, bases de datos... pero no solo es eso sino los gastos silenciosos los que lentamente van incrementando nuestra factura cloud. Hoy, nos centraremos en estos 4 puntos con ejemplos reales y acciones que espero que os ayuden en vuestro día a día. 
+
+PARTES:
+No dar teoría - Conceptos 
+1. Rightsizing, (el recurso en el que todos hemos caído, más madera, que empezamos un nuevo proyecto? Ponle capacidad de sobra y ya luego vemos cómo va)
+2. RECURSOS HUÉRFANOS (esas db que usamos un día y no nos acordamos más de ellas)
+3. LIFECYCLE POLICIES (sí, )
+4. NETWORKING
+
+
+
+2A. RIGHTSIZING: "Más madera" (3.5 min)
 [SLIDE: Imagen de Ferrari en parking de supermercado]
 Primer jinete: Rightsizing. O mejor dicho, la falta de él.
 ¿Cuántos de ustedes han pedido una instancia "por si acaso"? Una m5.2xlarge porque "mejor que sobre a que falte". Y esa instancia sigue corriendo seis meses después, con un 8% de CPU y 25% de memoria.
@@ -158,3 +162,10 @@ Para realizar las diapositivas, https://revealjs.com/ seguramente con ese script
 - Dark mode
 - Color rojo para gasto, color verde para ahorro 
 - Letra Fira Code
+
+
+Cambios:
+- Sobre mi: izq - medio - derecha
+- pedir logo resizes
+- añadir summary
+- 
