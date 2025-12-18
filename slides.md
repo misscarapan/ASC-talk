@@ -56,91 +56,165 @@ css: styles.css
 
 ---
 
-# El gasto silencioso
+<div class="text-center mb-8">
+  <h1 class="text-4xl font-bold text-amber-700">El gasto <span class="inline-block bg-amber-700 text-white px-2 py-1">silencioso</span></h1>
+</div>
 
-<ol class="text-2xl mt-8 list-none">
-  <li>Rightsizing</li>
-  <li>Recursos huérfanos</li>
-  <li>Lifecycle policies</li>
-  <li>Networking</li>
-  <li>Recomendaciones</li>
-</ol>
+<div class="grid grid-cols-2 gap-4 mt-6 text-left">
+  <div class="p-4 bg-gradient-to-br from-gray-50 to-gray-100/80 border border-amber-200/40 rounded-lg shadow-lg">
+    <div class="flex items-start gap-2">
+      <div class="text-3xl font-semibold text-amber-600/70 leading-none">01</div>
+      <div class="flex-1">
+        <h3 class="text-lg font-semibold mb-1 text-amber-700 tracking-tight">Rightsizing</h3>
+        <p class="text-sm text-gray-600 leading-snug">Tener más de lo que necesitamos</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-gradient-to-br from-gray-50 to-gray-100/80 border border-amber-200/40 rounded-lg shadow-lg">
+    <div class="flex items-start gap-2">
+      <div class="text-3xl font-semibold text-amber-600/70 leading-none">02</div>
+      <div class="flex-1">
+        <h3 class="text-lg font-semibold mb-1 text-amber-700 tracking-tight">Recursos huérfanos</h3>
+        <p class="text-sm text-gray-600 leading-snug">Aquello que usamos un día y quedó en el olvido</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-gradient-to-br from-gray-50 to-gray-100/80 border border-amber-200/40 rounded-lg shadow-lg">
+    <div class="flex items-start gap-2">
+      <div class="text-3xl font-semibold text-amber-600/70 leading-none">03</div>
+      <div class="flex-1">
+        <h3 class="text-lg font-semibold mb-1 text-amber-700 tracking-tight">Lifecycle policies</h3>
+        <p class="text-sm text-gray-600 leading-snug">Guardar todo para siempre por si acaso</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-gradient-to-br from-gray-50 to-gray-100/80 border border-amber-200/40 rounded-lg shadow-lg">
+    <div class="flex items-start gap-2">
+      <div class="text-3xl font-semibold text-amber-600/70 leading-none">04</div>
+      <div class="flex-1">
+        <h3 class="text-lg font-semibold mb-1 text-amber-700 tracking-tight">Networking</h3>
+        <p class="text-sm text-gray-600 leading-snug">Pagar por tráfico que no sabes que existe</p>
+      </div>
+    </div>
+  </div>
+</div>
 
----
-
-
-# RIGHTSIZING
-
-<div class="mt-10 flex justify-center">
-  <img src="/images/costura.jpg" alt="Costura" class="h-96 object-contain rounded shadow-lg">
+<div class="mt-4 p-4 bg-gradient-to-br from-emerald-50 to-emerald-100/60 border border-emerald-300/50 rounded-lg shadow-lg">
+  <div class="flex items-start gap-2">
+    <div class="text-3xl font-semibold text-emerald-600/70 leading-none">05</div>
+    <div class="flex-1">
+      <h3 class="text-lg font-semibold mb-1 text-emerald-700 tracking-tight">Recomendaciones</h3>
+      <p class="text-sm text-gray-600 leading-snug">Tu checklist del lunes</p>
+    </div>
+  </div>
 </div>
 
 ---
 
-# RIGHTSIZING
-
-<div class="mt-10 flex justify-center">
-  <img src="/images/rightsizing.png" alt="Rightsizing diagram" class="h-96 object-contain rounded shadow-lg">
+<div class="text-center mb-4">
+  <h1 class="text-4xl font-light tracking-widest text-black mb-2">RIGHTSIZING</h1>
+  <div class="w-20 h-px bg-amber-600 mx-auto mb-3"></div>
+  <p class="text-sm text-gray-600 font-light tracking-wide uppercase">O mejor dicho, la falta de él</p>
 </div>
-<div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
-  Rightsizing
+
+<div class="grid grid-cols-5 gap-6 mt-6">
+  <div class="col-span-3 flex justify-center items-center">
+    <img src="/images/costura.jpg" alt="Costura" class="h-64 w-full object-contain rounded-sm shadow-xl border border-gray-200">
+  </div>
+  <div class="col-span-2 flex justify-center items-center">
+    <img src="/images/rightsizing.png" alt="Rightsizing diagram" class="h-64 w-full object-contain rounded-sm shadow-xl border border-gray-200">
+  </div>
 </div>
----
 
-# GPU Instances
-
-| Instancia | Precio/hora |
-|-----------|-------------|
-| p3.8xlarge | <span class="text-red-500">€12/hora</span> |
-| p4 | <span class="text-red-500">€15-20/hora</span> |
-| g5 | <span class="text-red-500">€3-30/hora</span> |
-
-<div class="mt-4 p-4 bg-red-50 border-l-4 border-red-500 rounded">
-  <p><strong>El olvido:</strong> Entrenar 2h viernes tarde</p>
-  <p><strong>El coste:</strong> <span class="text-red-500 text-2xl">€720</span> el lunes por la mañana</p>
-  <p>GPU idle <span class="text-red-500">98%</span> del tiempo. Gasto silencioso</p>
-</div>
-<div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
-  Rightsizing
-</div>
----
-
-# La solución
-
-<ul class="text-lg mt-6 space-y-3">
-  <li>✅ <strong>Monitoring primero:</strong> No se puede optimizar lo que no se mide</li>
-  <li>✅ <strong>Alertas:</strong> Recursos con utilización baja &gt;X días</li>
-  <li>✅ <strong>Spot instances:</strong> <span class="text-green-500">70% ahorro</span> para workloads interrumpibles</li>
-  <li>✅ <strong>Auto-shutdown:</strong> Si no hay actividad en 2h, apagado automático</li>
-</ul>
-
-<div class="mt-8 p-4 bg-green-50 border-l-4 border-green-500 rounded">
-  <p>No se trata de ser tacaño.</p>
-  <p>Se trata de ser <strong>inteligente</strong>.</p>
-</div>
-<div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
-  Rightsizing
-</div>
----
-
-# RECURSOS HUÉRFANOS
-
-<div class="mt-8 flex justify-center">
-  <img src="/images/pablo-escobar-pablo.gif" alt="Pablo Escobar esperando" class="h-80 object-contain rounded">
+<div class="text-center mt-4">
+  <p class="text-lg font-light text-gray-800 italic tracking-wide">"Mejor que sobre a que falte"</p>
 </div>
 
 ---
-layout: center
-class: text-left
 
-# Recursos huérfanos comunes
+<div class="text-center mb-6">
+  <h1 class="text-4xl font-light tracking-widest text-black">RIGHTSIZING</h1>
+</div>
 
-<ul class="text-lg mt-6 space-y-2">
-  <li>💾 Discos EBS sin instancia asociada</li>
-  <li>🌐 IPs elásticas que no apuntan a nada</li>
-  <li>⚖️ Load balancers sin targets</li>
-  <li>📸 Snapshots de instancias eliminadas hace meses</li>
-</ul>
+<div class="grid grid-cols-2 gap-6 mt-6">
+  <div class="p-5 bg-rose-50 border-l-4 border-rose-400 rounded flex flex-col justify-center">
+    <h3 class="text-xl font-semibold mb-3 text-rose-700 text-center">El caso extremo: GPUs</h3>
+    <div class="text-center space-y-2">
+      <div class="text-sm space-y-1">
+        <p><strong>p3.8xlarge:</strong> <span class="text-rose-600">€12/hora</span></p>
+        <p>Entrenar 2h viernes tarde</p>
+      </div>
+      <p class="text-rose-700 font-semibold">Olvidar apagarla</p>
+      <p class="mt-2">GPU idle <span class="text-rose-600 font-bold">98%</span> del tiempo</p>
+      <div class="text-center">
+        <p class="text-4xl font-bold text-rose-700 mb-2">a €720</p>
+        <p class="text-sm text-gray-600 mb-3">el fin de semana</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-6 bg-slate-100 border-l-4 border-slate-400 rounded flex flex-col justify-center">
+    <h3 class="text-xl font-semibold mb-4 text-slate-700 text-center">El patrón</h3>
+    <div class="text-center space-y-4">
+      <div>
+        <p class="text-5xl font-bold text-slate-500 mb-1">10%</p>
+        <p class="text-sm text-gray-600 uppercase tracking-wide">Utilización</p>
+      </div>
+      <div class="text-2xl text-slate-600">↓</div>
+      <div>
+        <p class="text-5xl font-bold text-slate-700 mb-1">100%</p>
+        <p class="text-sm text-gray-600 uppercase tracking-wide">Pago</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+# RIGHTSIZING: La <span class="inline-block bg-black text-white px-2 py-1">solución</span>
+
+<div class="grid grid-cols-2 gap-6 mt-12">
+  <div class="p-6 flex flex-col justify-center">
+    <ul class="text-base space-y-3 list-none" style="list-style: none; padding-left: 0;">
+      <li style="list-style: none;">✅ <strong>Monitoring:</strong> No se puede optimizar lo que no se mide</li>
+      <li style="list-style: none;">✅ <strong>Alertas:</strong> Recursos con utilización baja &gt;X días</li>
+      <li style="list-style: none;">✅ <strong>Spot instances:</strong> <span class="text-green-500">70% ahorro</span> para workloads interrumpibles</li>
+      <li style="list-style: none;">✅ <strong>Auto-shutdown:</strong> Si no hay actividad en 2h, apagado automático</li>
+    </ul>
+  </div>
+  
+  <div class="p-6 bg-green-50 border-l-4 border-green-500 rounded flex flex-col items-center justify-center">
+    <div class="text-center mb-4">
+      <p class="text-2xl mb-2">No se trata de ser tacañx.</p>
+      <p class="text-2xl font-bold text-green-700">Se trata de ser inteligente.</p>
+    </div>
+    <img src="/images/inteligente.jpg" alt="Inteligente" class="h-32 object-contain rounded">
+  </div>
+</div>
+---
+
+<div class="text-center mb-6">
+  <h1 class="text-4xl font-light tracking-widest text-black">RECURSOS <span class="inline-block bg-black text-white px-2 py-1">HUÉRFANOS</span></h1>
+</div>
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+  <div class="flex justify-center items-center">
+    <img src="/images/pablo-escobar-pablo.gif" alt="Pablo Escobar esperando" class="h-64 object-contain rounded">
+  </div>
+  
+  <div class="flex flex-col justify-center">
+    <h2 class="text-2xl font-semibold mb-4 text-center">Los más olvidados</h2>
+    <ul class="text-lg space-y-3 list-none" style="list-style: none; padding-left: 0;">
+      <li style="list-style: none; white-space: nowrap;">💾 Discos sin instancia asociada</li>
+      <li style="list-style: none; white-space: nowrap;">🌐 IPs elásticas que no apuntan a nada</li>
+      <li style="list-style: none; white-space: nowrap;">⚖️ Load balancers sin targets</li>
+      <li style="list-style: none; white-space: nowrap;">📸 Snapshots de VM eliminadas hace meses</li>
+    </ul>
+  </div>
+</div>
 
 <div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
   Recursos huérfanos
@@ -148,20 +222,25 @@ class: text-left
 
 ---
 
-# <span class="text-red-500">¿Por qué pasa esto?</span>
+<div class="mb-12 text-center">
+  <h1 class="text-6xl font-light tracking-widest text-black mb-4">¿Por qué pasa?</h1>
+  <p class="text-2xl text-gray-600 font-light italic">Las <span class="inline-block bg-gray-800 text-white px-2 py-1">razones</span> del olvido</p>
+</div>
 
-<ul class="text-lg mt-6 space-y-2">
-  <li>❌ <code>terraform destroy</code> a medias</li>
-  <li>❌ Depuración manual: "Voy rápido para probar"</li>
-  <li>❌ "Ahora lo borro" → nunca llega</li>
-  <li>❌ "Esto dependía de..." → falta de ownership</li>
-</ul>
+<div class="mt-16 max-w-2xl mx-auto">
+  <ul class="text-xl space-y-6 list-none text-left" style="list-style: none; padding-left: 0;">
+    <li style="list-style: none;" class="text-gray-700 leading-relaxed">❌ <code class="bg-gray-100 px-2 py-1 rounded">terraform destroy</code> a medias</li>
+    <li style="list-style: none;" class="text-gray-700 leading-relaxed">❌ "Total es para probar..."</li>
+    <li style="list-style: none;" class="text-gray-700 leading-relaxed">❌ "Luego lo borro..."</li>
+    <li style="list-style: none;" class="text-gray-700 leading-relaxed">❌ "Esto dependía de..."</li>
+  </ul>
+</div>
 <div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
   Recursos huérfanos
 </div>
 ---
 
-# Ejemplo Volumen EBS de 2TB
+# Ejemplo Volumen <span class="inline-block bg-black text-white px-2 py-1">EBS</span> de 2TB
 
 <div class="mt-8 p-4 bg-red-50 border-l-4 border-red-500 rounded">
   <p>Datasets de experimentación de hace 6 meses</p>
@@ -178,18 +257,21 @@ class: text-left
 </div>
 ---
 
-# <span class="text-green-500">La solución: Tagging obligatorio</span>
+<div class="text-center mb-6">
+  <h1 class="text-4xl font-light tracking-widest text-black mb-2">La <span class="inline-block bg-black text-white px-2 py-1">solución</span></h1>
+  <p class="text-xl text-green-600 font-light italic">Tagging obligatorio</p>
+</div>
 
-<div class="mt-8">
-  <h3>Cada recurso debe tener:</h3>
-  <ul class="text-lg mt-4 space-y-2">
-    <li><code>project:</code> a qué proyecto pertenece</li>
-    <li><code>owner:</code> quién es responsable</li>
-    <li><code>ttl:</code> cuándo expira o puede revisarse</li>
+<div class="mt-6">
+  <h3 class="text-lg font-semibold mb-3 text-gray-700">Cada recurso debe tener:</h3>
+  <ul class="text-base mt-3 space-y-2">
+    <li><code class="bg-gray-100 px-2 py-1 rounded text-green-700">project:</code> a qué proyecto pertenece</li>
+    <li><code class="bg-gray-100 px-2 py-1 rounded text-green-700">owner:</code> quién es responsable</li>
+    <li><code class="bg-gray-100 px-2 py-1 rounded text-green-700">ttl:</code> cuándo expira o puede revisarse</li>
   </ul>
 </div>
 
-<div class="mt-8 p-4 bg-green-50 border-l-4 border-green-500 rounded">
+<div class="mt-6 p-4 bg-green-50 border-l-4 border-green-500 rounded">
   <p><strong>Auditorías automatizadas:</strong></p>
   <p>Script semanal → Email al owner:</p>
   <p>"Esto lleva 30 días sin usarse, ¿lo borramos?"</p>
@@ -200,35 +282,58 @@ class: text-left
 </div>
 ---
 
-# LIFECYCLE POLICIES
+<div class="text-center mb-6">
+  <h1 class="text-4xl font-light tracking-widest" style="color: #6B4E3D;"><span class="inline-block text-white px-2 py-1" style="background-color: #6B4E3D;">LIFECYCLE</span> POLICIES</h1>
+</div>
 
-
-<div class="mt-8 flex justify-center">
-  <img src="/images/recycle.jpg" alt="Museo del código legacy" class="h-96 object-contain rounded shadow-lg">
+<div class="grid grid-cols-2 gap-6 mt-12">
+  <div class="flex justify-center items-center">
+    <img src="/images/lifecycle.jpg" alt="Museo del código legacy" class="h-64 object-contain rounded">
+  </div>
+  
+  <div class="flex flex-col justify-center pr-4">
+    <h2 class="text-xl font-semibold mb-4 text-center" style="color: #7A5F4A;">Acumuladores <span class="inline-block text-white px-2 py-1" style="background-color: #6B4E3D;">comunes</span></h2>
+    <ul class="text-base space-y-3 list-none" style="list-style: none; padding-left: 0;">
+      <li style="list-style: none; color: #5A4A3F;">📸 Snapshots de hace 2 años </li>
+      <li style="list-style: none; color: #5A4A3F;">📝 Logs sin rotación en S3</li>
+      <li style="list-style: none; color: #5A4A3F;">💾 Backups de DDBB que ya no existen</li>
+    </ul>
+  </div>
 </div>
 
 ---
 
-# Ejemplo: AWS ECR
-
-<div class="mt-8 p-4 bg-red-50 border-l-4 border-red-500 rounded">
-  <p>Cada push a main genera una nueva imagen</p>
-  <p>"Por si necesitamos hacer rollback"</p>
-  <p class="text-red-500">Rollback a versión de hace 18 meses. Claro.</p>
+<div class="text-center mb-6">
+  <h1 class="text-4xl font-light tracking-widest text-black mb-2">Ejemplo: AWS <span class="inline-block bg-black text-white px-2 py-1">ECR</span></h1>
 </div>
 
-<div class="p-4 bg-green-50 border-l-4 border-green-500 rounded">
-  <ul class="mt-4 space-y-2">
-    <li>✅ Mantener últimas 10 imágenes por repositorio</li>
-    <li>✅ Mantener imágenes taggeadas como <code>production</code> indefinidamente</li>
-    <li>✅ Borrar todo lo demás después de 30 días</li>
-  </ul>
-  <p class="mt-4 text-xl">
-    Resultado: <span class="text-green-500">25TB → 5TB</span>
-  </p>
-  <p class="text-green-500 text-2xl mt-2">
-    30€/día ahorrados => 10950€/año ahorrados
-  </p>
+<div class="max-w-4xl mx-auto">
+  <div class="grid grid-cols-2 gap-6 mb-6">
+    <div class="p-6 bg-red-50 border-l-4 border-red-500 rounded-lg shadow-sm">
+      <h3 class="text-lg font-semibold text-red-700 mb-3">El problema</h3>
+      <p class="text-gray-700 mb-2">Cada push a main genera una nueva imagen</p>
+      <p class="text-gray-600 italic mb-3">"Guardamos por si necesitamos hacer rollback"</p>
+      <p class="text-red-600 font-medium">Tenemos versiones de hace 18 meses.</p>
+    </div>
+
+<div class="p-6 bg-green-50 border-l-4 border-green-500 rounded-lg shadow-sm">
+      <h3 class="text-lg font-semibold text-green-700 mb-3">La solución</h3>
+      <ul class="text-sm space-y-2 text-gray-700">
+        <li>✅ Mantener últimas imágenes por repositorio, p.e. 10</li>
+        <li>✅ Mantener imágenes taggeadas como <code class="bg-white px-1 rounded">production</code> indefinidamente</li>
+        <li>✅ Borrar las anteriores después de 30 días</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="p-6 bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-600 rounded-lg shadow-md text-center">
+    <p class="text-2xl font-light mb-2">
+      Resultado: <span class="font-bold text-green-600">25TB → 5TB</span>
+    </p>
+    <p class="text-green-600 text-xl font-semibold mt-2">
+      30€/día ahorrados → 10,950€/año ahorrados
+    </p>
+  </div>
 </div>
 
 <div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
@@ -237,74 +342,93 @@ class: text-left
 
 ---
 
-# Acumuladores comunes
-
-<ul class="text-lg mt-6 space-y-2">
-  <li>📸 Snapshots de hace 2 años "por si acaso"</li>
-  <li>📝 Logs sin rotación ocupando TB en S3</li>
-  <li>💾 Backups de bases de datos que ya no existen</li>
-</ul>
-
-<div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
-  LIFECYCLE POLICIES
+<div class="text-center mb-6">
+  <h1 class="text-4xl font-light tracking-widest" style="color: #6B4E3D;">Modelos y embeddings sin control</h1>
 </div>
 
----
-
-# Modelos y embeddings sin control
-
-<div class="p-4 bg-red-50 border-l-4 border-red-500 rounded">
-  <p><strong>El museo moderno:</strong> Modelos de ML</p>
-  <ul class="mt-4 space-y-2">
-    <li>Cada fine-tuning: nueva versión (5GB)</li>
-    <li>50 versiones de un modelo</li>
-    <li>Solo usa la última en producción</li>
-    <li class="text-red-500 mt-2">250GB que nadie necesita</li>
-    <li>Embeddings almacenados "por si cambiamos de estrategia"</li>
-    <li>Datasets duplicados entre proyectos</li>
-  </ul>
-</div>
-
-
-<div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
-  LIFECYCLE POLICIES
-</div>
-
----
-
-# <span class="text-green-500">La solución</span>
-
-<div class="mt-4 text-lg">
-  <p class="text-red-500">❌ "¿Lo necesitaremos algún día?"</p>
-  <p class="text-green-500">✅ "¿Cuándo fue la última vez que lo necesitamos?"</p>
-</div>
-
-<div class="mt-8 p-4 bg-green-50 border-l-4 border-green-500 rounded">
-  <h3>Lifecycle policies desde día uno:</h3>
-  <ul class="mt-4 space-y-2">
-    <li>Imágenes: últimas N versiones + tags específicos</li>
-    <li>Logs: retención basada en compliance real</li>
-    <li>Modelos: mejor accuracy + última productiva</li>
-    <li>Snapshots: retención incremental</li>
+<div class="max-w-3xl mx-auto mt-12">
+  <h2 class="text-2xl font-semibold mb-6 text-center" style="color: #7A5F4A;"><span class="inline-block text-white px-2 py-1" style="background-color: #6B4E3D;">El museo moderno</span></h2>
+  <ul class="text-lg space-y-4 list-none text-left" style="list-style: none; padding-left: 0;">
+    <li style="list-style: none; color: #5A4A3F;">🤖 Cada fine-tuning genera una nueva versión (5GB)</li>
+    <li style="list-style: none; color: #5A4A3F;">📦 50 versiones de un modelo, solo usa la última en producción</li>
+    <li style="list-style: none; color: #8B4A3A; font-weight: 600;">💾 250GB que nadie necesita</li>
+    <li style="list-style: none; color: #5A4A3F;">🔗 Embeddings almacenados "por si cambiamos de estrategia"</li>
+    <li style="list-style: none; color: #5A4A3F;">📊 Datasets duplicados entre proyectos</li>
   </ul>
 </div>
 
-<p class="mt-4">Si realmente lo necesitan: <strong>Glacier</strong> (1/5 del coste)</p>
+
+<div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
+  LIFECYCLE POLICIES
+</div>
+
+---
+
+<div class="text-center mb-6">
+  <h1 class="text-4xl font-light tracking-widest text-black mb-2">La <span class="inline-block bg-black text-white px-2 py-1">solución</span></h1>
+</div>
+
+<div class="max-w-4xl mx-auto">
+  <div class="grid grid-cols-2 gap-4 mb-8">
+    <div class="p-4 bg-red-50 border-l-4 border-red-400 rounded-lg text-center">
+      <p class="text-base text-red-600 font-medium">❌ "¿Lo necesitaremos algún día?"</p>
+    </div>
+    <div class="p-4 bg-green-50 border-l-4 border-green-500 rounded-lg text-center">
+      <p class="text-base text-green-700 font-semibold">✅ "¿Cuándo fue la última vez que lo necesitamos?"</p>
+    </div>
+  </div>
+
+  <div class="p-6 bg-green-50 border-l-4 border-green-500 rounded-lg shadow-sm mb-4">
+    <h3 class="text-lg font-semibold text-green-700 mb-4">Lifecycle policies desde día uno:</h3>
+    <div class="grid grid-cols-2 gap-3 text-sm text-gray-700">
+      <div>📦 Imágenes: últimas N versiones + tags específicos</div>
+      <div>📝 Logs: retención basada en compliance real</div>
+      <div>🤖 Modelos: mejor accuracy + última productiva</div>
+      <div>💾 Snapshots: retención incremental</div>
+    </div>
+  </div>
+
+  <div class="p-3 bg-gray-50 border border-gray-300 rounded-lg text-center">
+    <p class="text-sm text-gray-600">Si realmente lo necesitan: <strong class="text-green-600">Glacier</strong> (1/5 del coste)</p>
+  </div>
+</div>
 
 <div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
   LIFECYCLE POLICIES
 </div>
 ---
 
-# NETWORKING
+<div class="text-center mb-6">
+  <h1 class="text-4xl font-light tracking-widest text-black mb-4"><span class="inline-block bg-black text-white px-2 py-1">NETWORKING</span></h1>
+  <p class="text-lg text-gray-600 italic">Pagar por tráfico que no sabes que existe</p>
+</div>
 
-<div class="mt-8 flex justify-center">
-  <img src="/images/networking.png" alt="Networking costs" class="h-96 object-contain rounded shadow-lg">
+<div class="max-w-3xl mx-auto mt-8">
+  <div class="flex justify-center mb-6">
+    <img src="/images/networking.png" alt="Networking costs" class="w-full h-32 object-contain" style="background: transparent;">
+  </div>
+  <div class="grid grid-cols-3 gap-6">
+    <div class="p-4 bg-red-50 border-l-4 border-red-500 rounded-lg">
+      <p class="text-sm text-gray-600 mb-1">Inter-AZ traffic</p>
+      <p class="text-2xl font-bold text-red-600">€0.01/GB</p>
+      <p class="text-xs text-gray-500 mt-1">1TB/día = €300/mes</p>
+    </div>
+    <div class="p-4 bg-red-50 border-l-4 border-red-500 rounded-lg">
+      <p class="text-sm text-gray-600 mb-1">NAT Gateway</p>
+      <p class="text-2xl font-bold text-red-600">€0.045/GB</p>
+      <p class="text-xs text-gray-500 mt-1">+ €0.048/hora solo por existir</p>
+    </div>
+    <div class="p-4 bg-gray-50 border-l-4 border-gray-400 rounded-lg">
+      <p class="text-sm text-gray-600 mb-2">LLMs & model serving</p>
+      <p class="text-xs text-gray-600">GB entre AZs</p>
+      <p class="text-xs text-gray-600">Modelos 5GB en cada deploy</p>
+    </div>
+  </div>
 </div>
 
 ---
 
-# Costes invisibles
+# Costes <span class="inline-block bg-black text-white px-2 py-1">invisibles</span>
 
 <div class="grid grid-cols-3 gap-8 mt-10 text-left text-sm">
   <div>
@@ -341,7 +465,7 @@ class: text-left
 </div>
 ---
 
-# Ejemplos de workloads single-AZ válidos
+# Ejemplos de workloads <span class="inline-block bg-black text-white px-2 py-1">single-AZ</span> válidos
 
 <ul class="text-lg mt-6 space-y-2">
   <li>✅ Entornos efímeros que viven 3 horas</li>
@@ -357,7 +481,7 @@ class: text-left
 </div>
 ---
 
-# Tabla comparativa: AWS vs Azure vs Scaleway
+# Tabla <span class="inline-block bg-black text-white px-2 py-1">comparativa</span>: AWS vs Azure vs Scaleway
 
 | Provider | Inter-Zone Traffic |
 |----------|-------------------|
@@ -372,7 +496,7 @@ class: text-left
 
 
 
-# <span class="text-green-500">La solución</span>
+<div class="text-center mb-2" style="font-size: 0.875rem;"><span>La <span class="inline-block bg-black text-white px-1.5 py-0.5" style="font-size: 0.75rem;">solución</span></span></div>
 
 <ul class="text-lg mt-6 space-y-3">
   <li>✅ <strong>VPC endpoints:</strong> Para servicios AWS (S3, DynamoDB) evitan NAT Gateway</li>
@@ -439,7 +563,7 @@ class: text-left
 </div>
 ---
 
-# Herramientas que ayudan
+# Herramientas que <span class="inline-block bg-black text-white px-2 py-1">ayudan</span>
 
 <div class="mt-6">
   <h3 class="text-green-500">Nativas:</h3>

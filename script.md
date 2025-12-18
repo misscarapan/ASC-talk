@@ -9,46 +9,46 @@ Muy bien, todos hemos estado ahí, y lo primero que hacemos es buscar instancias
 
 PARTES:
 No dar teoría - Conceptos 
-1. Rightsizing, (el recurso en el que todos hemos caído, más madera, que empezamos un nuevo proyecto? Ponle capacidad de sobra y ya luego vemos cómo va)
-2. RECURSOS HUÉRFANOS (esas db que usamos un día y no nos acordamos más de ellas)
-3. LIFECYCLE POLICIES (sí, )
-4. NETWORKING
+1. Rightsizing - tener mas  de lo que necesitamos
+2. RECURSOS HUÉRFANOS - aquello que usamos un día y quedó en el olvido
+3. LIFECYCLE POLICIES - guardar todo para siempre por si acaso
+4. NETWORKING - pagar por tráfico que no sabes que existe
 
-
+Empecemos con el primero. 
 
 2A. RIGHTSIZING: "Más madera" (3.5 min)
 [SLIDE: Imagen de Ferrari en parking de supermercado]
 Primer jinete: Rightsizing. O mejor dicho, la falta de él.
-¿Cuántos de ustedes han pedido una instancia "por si acaso"? Una m5.2xlarge porque "mejor que sobre a que falte". Y esa instancia sigue corriendo seis meses después, con un 8% de CPU y 25% de memoria.
+Todos hemos pedido una instancia "por si acaso". Una m5.2xlarge porque "mejor que sobre a que falte". Esa instancia sigue corriendo seis meses después, con un 8% de CPU y 25% de memoria.
 [SLIDE: Dashboard mostrando recursos con métricas bajas]
-El problema no es solo que pagamos de más. Es que nunca volvemos a revisar. Lanzamos, funciona, y nos olvidamos.
+El problema no es solo que pagamos de más. El problema es que nunca volvemos a revisar. Lanzamos, funciona, y nos olvidamos.
 [SLIDE: GPU instances con precios - p3, p4, g5: €3-30/hora]
-Pero el caso extremo son las GPUs. Un desarrollador necesita entrenar un modelo. Levanta una instancia p3.8xlarge a 12 euros la hora. Entrena durante 2 horas un viernes por la tarde... y se olvida de apagarla.
-El lunes por la mañana, ese olvido ha costado 720 euros. Y lo peor: la GPU ha estado idle el 98% del tiempo.
+El caso extremo son las GPUs. Un desarrollador necesita entrenar un modelo. Levanta una instancia p3.8xlarge a 12 euros la hora. Entrena durante 2 horas un viernes por la tarde... y se olvida de apagarla.
+El lunes por la mañana, ese olvido ha costado 720 euros. La GPU ha estado idle el 98% del tiempo.
 [SLIDE: "CPU <10%, memoria <30%, GPU <5%... pagando 100%"]
 Este es el patrón: utilizamos el 10%, pagamos el 100%.
 [SLIDE: "La solución"]
-¿La solución? Monitoring primero, acción después. No se puede optimizar lo que no se mide. Implementar alertas cuando recursos llevan más de X días con utilización baja. Usar spot instances para workloads interrumpibles – ahorro del 70%. Y lo más importante: políticas de auto-shutdown. Si esa GPU no ha tenido actividad en 2 horas, que se apague sola.
+La solución es clara: monitoring primero, acción después. No se puede optimizar lo que no se mide. Implementen alertas cuando recursos llevan más de X días con utilización baja. Usen spot instances para workloads interrumpibles – ahorro del 70%. Y lo más importante: políticas de auto-shutdown. Si esa GPU no ha tenido actividad en 2 horas, que se apague sola.
 No se trata de ser tacaño. Se trata de ser inteligente.
 
 2B. RECURSOS HUÉRFANOS: "Los zombies que siguen cobrando" (3.5 min)
 [SLIDE: Imagen estilo zombies caminando]
 Segundo jinete: Los recursos huérfanos. Los zombies.
 [SLIDE: Lista de recursos huérfanos comunes]
-Discos EBS sin instancia asociada. IPs elásticas que no apuntan a nada. Load balancers configurados pero sin targets. Volúmenes de snapshots de instancias que se eliminaron hace meses.
-¿Por qué pasa esto?
+Discos EBS sin instancia asociada. IPs elásticas que no apuntan a nada. Load balancers configurados sin targets. Volúmenes de snapshots de instancias que se eliminaron hace meses.
+Esto pasa por tres razones:
 [SLIDE: "Terraform destroy a medias, depuración manual, 'ahora lo borro'"]
-Porque hacemos un terraform destroy pero algo falla y no limpia todo. Porque creamos algo manual "rapidito para probar" y nos olvidamos. Porque pensamos "esto lo borro luego" y luego nunca llega.
+Hacemos un terraform destroy, algo falla y no limpia todo. Creamos algo manual "rapidito para probar" y nos olvidamos. Pensamos "esto lo borro luego" y luego nunca llega.
 [SLIDE: Volumen EBS de 2TB: €200/mes]
-Y así es como acabamos con un volumen EBS de 2 terabytes con datasets de experimentación de hace seis meses. "Por si acaso necesitamos reproducir esos resultados", dijimos. Nadie lo ha tocado desde entonces. 200 euros al mes. Multipliquen eso por cada experimento que hicieron el año pasado.
+Acabamos con un volumen EBS de 2 terabytes con datasets de experimentación de hace seis meses. "Por si acaso necesitamos reproducir esos resultados", dijimos. Nadie lo ha tocado desde entonces. 200 euros al mes. Multipliquen eso por cada experimento que hicieron el año pasado.
 [SLIDE: Múltiples volúmenes sin uso acumulándose]
-El problema de los zombies es que son silenciosos. No dan errores. No generan alertas. Simplemente... cobran.
+Los zombies son silenciosos. No dan errores. No generan alertas. Simplemente cobran.
 [SLIDE: "La solución: Tagging obligatorio"]
 La solución empieza con tagging obligatorio. Cada recurso debe tener:
 project: a qué proyecto pertenece
 owner: quién es responsable
 ttl: cuándo expira o puede revisarse
-Y luego, auditorías automatizadas. Un script semanal que busque recursos sin tags, recursos sin actividad, discos sin attach. Y que envíe un email al owner diciendo: "Oye, esto lleva 30 días sin usarse, ¿lo borramos?"
+Luego, auditorías automatizadas. Un script semanal que busque recursos sin tags, recursos sin actividad, discos sin attach. Que envíe un email al owner: "Este recurso lleva 30 días sin usarse. ¿Lo borramos?"
 No esperen a la factura de fin de mes para descubrir a los zombies.
 
 2C. LIFECYCLE POLICIES: "Tu museo del código (muy caro)" (3.5 min)
@@ -56,7 +56,7 @@ No esperen a la factura de fin de mes para descubrir a los zombies.
 Tercer jinete: La falta de lifecycle policies. O como me gusta llamarlo, tu museo del código.
 Todos tenemos ese amigo acumulador que no tira nada "por si acaso". En cloud, todos somos ese amigo.
 [SLIDE: Gráfica: 25TB → 5TB en ECR]
-Vuelvo al ejemplo del principio. 25 terabytes en ECR. ¿Cómo llegaron ahí? Fácil: cada push a main genera una nueva imagen. Nunca borramos ninguna. "Por si necesitamos hacer rollback", decimos. Rollback a una versión de hace 18 meses. Claro.
+25 terabytes en ECR. Cada push a main genera una nueva imagen. Nunca borramos ninguna. "Por si necesitamos hacer rollback", decimos. Rollback a una versión de hace 18 meses.
 [SLIDE: Desglose de qué ocupaba espacio]
 Implementaron lifecycle policies simples:
 Mantener últimas 10 imágenes por repositorio
@@ -64,12 +64,12 @@ Mantener imágenes taggeadas como production indefinidamente
 Borrar todo lo demás después de 30 días
 Resultado: de 25TB a 5TB. 30 euros al día ahorrados.
 [SLIDE: Otros acumuladores comunes]
-Pero ECR no es el único museo. Snapshots de hace dos años "por si necesitamos restaurar algo antiguo". Logs sin rotación ocupando terabytes en S3. Backups de bases de datos que ya no existen.
+ECR no es el único museo. Snapshots de hace dos años "por si necesitamos restaurar algo antiguo". Logs sin rotación ocupando terabytes en S3. Backups de bases de datos que ya no existen.
 [SLIDE: Modelos y embeddings sin control]
-Y ahora, el museo moderno: modelos de ML. Cada fine-tuning genera una nueva versión del modelo. 5GB por versión. Nadie configura retención. Nadie borra versiones antiguas. 50 versiones de un modelo que solo usa la última en producción: 250GB que nadie necesita.
+El museo moderno: modelos de ML. Cada fine-tuning genera una nueva versión del modelo. 5GB por versión. Nadie configura retención. Nadie borra versiones antiguas. 50 versiones de un modelo que solo usa la última en producción: 250GB que nadie necesita.
 Embeddings y vectores almacenados "por si cambiamos de estrategia". Datasets de entrenamiento duplicados entre proyectos porque "no sabíamos que ya existía".
 [SLIDE: "Por qué pasa: 'Nunca se sabe si lo necesitaremos'"]
-¿Por qué pasa? Por el miedo. El miedo a borrar algo que alguien, algún día, quizás, podría necesitar.
+Pasa por el miedo. El miedo a borrar algo que alguien, algún día, quizás, podría necesitar.
 [SLIDE: "La solución"]
 La solución es cambiar la pregunta. No es "¿lo necesitaremos algún día?" Es "¿cuándo fue la última vez que lo necesitamos?"
 Lifecycle policies desde día uno:
@@ -77,7 +77,7 @@ Imágenes de containers: últimas N versiones + tags específicos
 Logs: retención basada en compliance real, no en "por si acaso"
 Modelos: mantener versiones con mejor accuracy + última versión productiva
 Snapshots: retención incremental, no todo para siempre
-Y si realmente necesitan algo antiguo algún día, existe el concepto de Glacier. 1/5 del coste de S3 estándar para cosas que casi nunca se acceden.
+Si realmente necesitan algo antiguo algún día, existe Glacier. 1/5 del coste de S3 estándar para cosas que casi nunca se acceden.
 No todo merece vivir en hot storage para siempre.
 
 2D. NETWORKING: "Pagar por hablar con tu vecino" (3.5 min)
