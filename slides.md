@@ -347,35 +347,6 @@ css: styles.css
 ---
 
 <div class="text-center mb-6">
-  <h1 class="text-4xl font-light tracking-widest text-black mb-2">Modelos y embeddings sin control</h1>
-  <p class="text-3xl text-gray-600 font-light italic mt-3"><span class="inline-block bg-gray-800 text-white px-2 py-1">El museo moderno</span></p>
-</div>
-
-<div class="max-w-5xl mx-auto mt-8">
-  <div class="grid grid-cols-2 gap-6">
-    <div class="flex justify-center items-center">
-      <img src="/images/modern.jpg" alt="Modelos sin control" class="h-64 object-contain rounded">
-    </div>
-    
-  <div class="flex flex-col justify-center">
-      <ul class="text-lg space-y-4 list-none text-left" style="list-style: none; padding-left: 0;">
-        <li style="list-style: none; color: #4B5563;">📦 50 versiones de un modelo, solo usa la última en producción</li>
-        <li style="list-style: none; color: #111827; font-weight: 600;">💾 250GB que nadie necesita</li>
-        <li style="list-style: none; color: #4B5563;">🔗 Embeddings almacenados "por si cambiamos de estrategia"</li>
-        <li style="list-style: none; color: #4B5563;">📊 Datasets duplicados entre proyectos</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
-<div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
-  LIFECYCLE POLICIES
-</div>
-
----
-
-<div class="text-center mb-6">
   <h1 class="text-4xl font-light tracking-widest text-black mb-2">La <span class="inline-block bg-black text-white px-2 py-1">solución</span></h1>
 </div>
 
