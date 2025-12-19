@@ -46,13 +46,34 @@ css: styles.css
 
 ---
 
-# Sobre mí
+<div class="text-center mb-6">
+  <h1 class="text-4xl font-light tracking-widest text-black mb-2"><span class="inline-block bg-black text-white px-2 py-1">Sobre mí</span></h1>
+</div>
 
-| SRE en Ozona Tech | Resizes → Dash | Mentora en Step4ward |
-| --- | --- | --- |
-| Diseño y opero infraestructura en Azure. | **Contributor en Resizes** – Plataforma agnóstica para desarrolladores. | Comunidad para acompañar a mujeres en el sector tech. |
-|  | **Dash believer** – Producto para que los devs no se preocupen por la infra. |  |
-| ![Ozona Tech](/images/ozona.png) | _Resizes_ ⟶ _Dash_ | ![Step4ward](/images/step4ward.png) |
+<div class="grid grid-cols-3 gap-6 mt-8">
+  <div class="p-6 bg-gradient-to-br from-gray-50 to-gray-100/80 border border-gray-200/40 rounded-lg shadow-lg text-center">
+    <img src="/images/ozona.png" alt="Ozona Tech" class="h-16 mx-auto mb-4 object-contain">
+    <h3 class="text-lg font-semibold mb-2 text-gray-800">SRE</h3>
+    <p class="text-sm text-gray-600 leading-relaxed">Diseño y opero infraestructura en Azure</p>
+  </div>
+  
+  <div class="p-6 bg-gradient-to-br from-gray-50 to-gray-100/80 border border-gray-200/40 rounded-lg shadow-lg text-center">
+    <img src="/images/resizes-logo-png.png" alt="Resizes" class="h-16 mx-auto mb-4 object-contain">
+    <div class="mb-4">
+    </div>
+    <h3 class="text-lg font-semibold mb-2 text-gray-800">Contributor</h3>
+    <p class="text-sm text-gray-600 mb-2 leading-relaxed">Plataforma agnóstica para desarrolladores</p>
+      <span class="text-lg font-semibold text-gray-800">DASH ❤️</span>
+    <p class="text-sm text-gray-600 mb-2 leading-relaxed">Aplicación para desplegar en la nube sin tocar infra</p>
+
+  </div>
+  
+  <div class="p-6 bg-gradient-to-br from-gray-50 to-gray-100/80 border border-gray-200/40 rounded-lg shadow-lg text-center">
+    <img src="/images/step4ward.png" alt="Step4ward" class="h-16 mx-auto mb-4 object-contain">
+    <h3 class="text-lg font-semibold mb-2 text-gray-800">Mentora</h3>
+    <p class="text-sm text-gray-600 leading-relaxed">Comunidad para acompañar a mujeres en el sector tech</p>
+  </div>
+</div>
 
 ---
 
@@ -240,23 +261,6 @@ css: styles.css
 </div>
 ---
 
-# Ejemplo Volumen <span class="inline-block bg-black text-white px-2 py-1">EBS</span> de 2TB
-
-<div class="mt-8 p-4 bg-red-50 border-l-4 border-red-500 rounded">
-  <p>Datasets de experimentación de hace 6 meses</p>
-  <p>"Por si acaso necesitamos reproducir..."</p>
-  <p>Nadie lo ha tocado desde entonces</p>
-  <p>200€/mes</p>
-</div>
-
-<div class="mt-8 p-4 bg-green-50 border-l-4 border-green-500 rounded">
-  <p>Eliminando el volumen estaríamos ahorrando 200€/mes</p>
-</div>
-<div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
-  Recursos huérfanos
-</div>
----
-
 <div class="text-center mb-6">
   <h1 class="text-4xl font-light tracking-widest text-black mb-2">La <span class="inline-block bg-black text-white px-2 py-1">solución</span></h1>
   <p class="text-xl text-green-600 font-light italic">Tagging obligatorio</p>
@@ -349,7 +353,6 @@ css: styles.css
 <div class="max-w-3xl mx-auto mt-12">
   <h2 class="text-2xl font-semibold mb-6 text-center" style="color: #7A5F4A;"><span class="inline-block text-white px-2 py-1" style="background-color: #6B4E3D;">El museo moderno</span></h2>
   <ul class="text-lg space-y-4 list-none text-left" style="list-style: none; padding-left: 0;">
-    <li style="list-style: none; color: #5A4A3F;">🤖 Cada fine-tuning genera una nueva versión (5GB)</li>
     <li style="list-style: none; color: #5A4A3F;">📦 50 versiones de un modelo, solo usa la última en producción</li>
     <li style="list-style: none; color: #8B4A3A; font-weight: 600;">💾 250GB que nadie necesita</li>
     <li style="list-style: none; color: #5A4A3F;">🔗 Embeddings almacenados "por si cambiamos de estrategia"</li>
@@ -405,179 +408,210 @@ css: styles.css
 
 <div class="max-w-3xl mx-auto mt-8">
   <div class="flex justify-center mb-6">
-    <img src="/images/networking.png" alt="Networking costs" class="w-full h-32 object-contain" style="background: transparent;">
+    <img src="/images/networking.png" alt="Networking costs" class="w-full h-80 object-contain" style="background: transparent;">
   </div>
+</div>
+
+---
+
+<div class="text-center mb-6">
+  <h1 class="text-4xl font-light tracking-widest text-black mb-2">Costes <span class="inline-block bg-black text-white px-2 py-1">invisibles</span></h1>
+</div>
+
+<div class="max-w-5xl mx-auto mt-8">
   <div class="grid grid-cols-3 gap-6">
-    <div class="p-4 bg-red-50 border-l-4 border-red-500 rounded-lg">
-      <p class="text-sm text-gray-600 mb-1">Inter-AZ traffic</p>
-      <p class="text-2xl font-bold text-red-600">€0.01/GB</p>
-      <p class="text-xs text-gray-500 mt-1">1TB/día = €300/mes</p>
+    <div class="p-5 bg-red-50 border-l-4 border-red-500 rounded-lg">
+      <h3 class="text-lg font-semibold text-red-700 mb-2">Inter-AZ traffic</h3>
+      <p class="text-3xl font-bold text-red-600 mb-3">€0.01/GB</p>
+      <p class="text-sm mb-2">1TB/día = €300/mes </p>
+      <p class="text-sm font-semibold text-gray-700">Suena a poco, hasta que mueves <span class="text-red-600 font-semibold">terabytes cada día</span>.</p>
     </div>
-    <div class="p-4 bg-red-50 border-l-4 border-red-500 rounded-lg">
-      <p class="text-sm text-gray-600 mb-1">NAT Gateway</p>
-      <p class="text-2xl font-bold text-red-600">€0.045/GB</p>
-      <p class="text-xs text-gray-500 mt-1">+ €0.048/hora solo por existir</p>
+    <div class="p-5 bg-red-50 border-l-4 border-red-500 rounded-lg">
+      <h3 class="text-lg font-semibold text-red-700 mb-2">NAT Gateway</h3>
+      <p class="text-2xl font-bold text-red-600 mb-2">€0.045/GB procesado</p>
+      <p class="text-xs text-gray-600 mb-3">+ €0.048/hora solo por existir</p>
+      <p class="text-sm font-semibold mb-2">Con 1TB diario:</p>
+      <p class="text-red-600 text-3xl font-bold">≈ €1,400/mes</p>
+      <p class="text-xs text-gray-500 mt-1">Solo en procesamiento de NAT</p>
     </div>
-    <div class="p-4 bg-gray-50 border-l-4 border-gray-400 rounded-lg">
-      <p class="text-sm text-gray-600 mb-2">LLMs & model serving</p>
-      <p class="text-xs text-gray-600">GB entre AZs</p>
-      <p class="text-xs text-gray-600">Modelos 5GB en cada deploy</p>
+    <div class="p-5 bg-red-50 border-l-4 border-red-500 rounded-lg">
+      <h3 class="text-lg font-semibold text-red-700 mb-3">LLMs & model serving</h3>
+      <ul class="text-sm space-y-2 list-none" style="list-style: none; padding-left: 0;">
+        <li style="list-style: none;">🤖 Endpoints multi-AZ moviendo GB de requests</li>
+        <li style="list-style: none;">📥 Descargar modelos de 5GB desde S3 en cada deploy</li>
+        <li style="list-style: none;" class="text-red-600 mt-3 font-semibold">Todo va sumando</li>
+      </ul>
     </div>
   </div>
 </div>
 
+<div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
+  NETWORKING
+</div>
 ---
 
-# Costes <span class="inline-block bg-black text-white px-2 py-1">invisibles</span>
+<div class="text-center mb-6">
+  <h1 class="text-4xl font-light tracking-widest text-black mb-2">Alternativas y <span class="inline-block bg-black text-white px-2 py-1">comparativa</span></h1>
+</div>
 
-<div class="grid grid-cols-3 gap-8 mt-10 text-left text-sm">
-  <div>
-    <h3 class="text-red-500 mb-2">Inter-AZ traffic</h3>
-    <p class="text-3xl font-bold text-red-500">€0.01/GB</p>
-    <p class="mt-4">Suena a poco, ¿verdad?</p>
-    <p class="mt-2">Hasta que mueves <span class="text-red-500">terabytes cada día</span>.</p>
-    <p class="mt-4 font-semibold">1TB/día inter-AZ → €10/día · €300/mes</p>
+<div class="max-w-5xl mx-auto mt-8">
+  <div class="grid grid-cols-2 gap-8">
+    <div class="p-6 bg-blue-50 border-l-4 border-blue-500 rounded-lg">
+      <h3 class="text-xl font-semibold mb-4 text-blue-700">Workloads single-AZ válidos</h3>
+      <ul class="text-base space-y-2 list-none" style="list-style: none; padding-left: 0;">
+        <li style="list-style: none;">✅ Entornos efímeros</li>
+        <li style="list-style: none;">✅ Jobs batch que pueden reintentar</li>
+        <li style="list-style: none;">✅ Ambientes de testing</li>
+      </ul>
+    </div>
+    
+  <div class="p-6 bg-gradient-to-br from-gray-50 to-gray-100/80 border border-gray-200/40 rounded-lg shadow-lg">
+      <h3 class="text-xl font-semibold mb-4 text-gray-800">Comparativa providers</h3>
+      <div class="space-y-3">
+        <div class="flex justify-between items-center pb-2 border-b border-gray-200">
+          <span class="font-semibold text-gray-700">AWS</span>
+          <span class="text-red-600 font-bold">€0.01/GB</span>
+        </div>
+        <div class="flex justify-between items-center pb-2 border-b border-gray-200">
+          <span class="font-semibold text-gray-700">Azure</span>
+          <span class="text-green-600 font-bold">Incluido</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="font-semibold text-gray-700">Scaleway</span>
+          <span class="text-green-600 font-bold text-sm">Modelos más predecibles</span>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div>
-    <h3 class="text-red-500 mb-2">NAT Gateway</h3>
-    <ul class="list-none space-y-1">
-      <li>💰 <strong>€0.045/GB</strong> procesado</li>
-      <li>💰 <strong>€0.048/hora</strong> solo por existir</li>
-    </ul>
-    <p class="mt-4 font-semibold">Con 1TB diario:</p>
-    <p class="text-red-500 text-3xl mt-1">≈ €1,400/mes</p>
-    <p class="mt-1 text-xs opacity-70">Solo en procesamiento de NAT</p>
-  </div>
-
-  <div>
-    <h3 class="text-red-500 mb-2">LLMs & model serving</h3>
-    <ul class="text-sm mt-2 space-y-1">
-      <li>🤖 Endpoints multi-AZ moviendo GB de requests</li>
-      <li>📥 Descargar modelos de 5GB desde S3 en cada deploy</li>
-      <li class="text-red-500 mt-2 font-semibold">Todo eso también cuenta</li>
-    </ul>
-  </div>
-</div>
-
-<div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
-  NETWORKING
-</div>
----
-
-# Ejemplos de workloads <span class="inline-block bg-black text-white px-2 py-1">single-AZ</span> válidos
-
-<ul class="text-lg mt-6 space-y-2">
-  <li>✅ Entornos efímeros que viven 3 horas</li>
-  <li>✅ Jobs de procesamiento batch que pueden reintentar</li>
-  <li>✅ Ambientes de testing donde caerse no es crítico</li>
-</ul>
-
-<div class="mt-8 p-4 bg-green-50 border-l-4 border-green-500 rounded">
-  <p class="text-xl">¿Por qué hacer multi-AZ ahí?</p>
-</div>
-<div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
-  NETWORKING
-</div>
----
-
-# Tabla <span class="inline-block bg-black text-white px-2 py-1">comparativa</span>: AWS vs Azure vs Scaleway
-
-| Provider | Inter-Zone Traffic |
-|----------|-------------------|
-| AWS | <span class="text-red-500">€0.01/GB</span> |
-| Azure | <span class="text-green-500">Incluido</span> |
-| Scaleway | <span class="text-green-500">Modelos más predecibles</span> |
-<div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
-  NETWORKING
-</div>
-
----
-
-
-
-<div class="text-center mb-2" style="font-size: 0.875rem;"><span>La <span class="inline-block bg-black text-white px-1.5 py-0.5" style="font-size: 0.75rem;">solución</span></span></div>
-
-<ul class="text-lg mt-6 space-y-3">
-  <li>✅ <strong>VPC endpoints:</strong> Para servicios AWS (S3, DynamoDB) evitan NAT Gateway</li>
-  <li>✅ <strong>Segmentar por criticidad:</strong> Single-AZ para non-prod, multi-AZ solo donde importa</li>
-  <li>✅ <strong>Arquitectura consciente:</strong> Si dos servicios hablan mucho, misma AZ</li>
-  <li>✅ <strong>Caching local:</strong> Modelos en vez de descargarlos cada vez</li>
-  <li>✅ <strong>Providers alternativos:</strong> Mejor pricing en networking para ciertos workloads</li>
-</ul>
-
-<div class="mt-8 p-4 bg-green-50 border-l-4 border-green-500 rounded">
-  <p class="text-xl">El mejor ahorro es el gasto que no haces</p>
-</div>
-<div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
-  NETWORKING
-</div>
----
-
-# "¿Y ahora qué hago?"
-
-## <span class="text-green-500">Prioridad 1 - Visibilidad (Semana 1)</span>
-
-<ul class="text-base mt-4 space-y-2">
-  <li>☐ Implementar tagging obligatorio. Sin tags, sin deploy</li>
-  <li>☐ Activar Cost Explorer y alertas de anomalías</li>
-  <li>☐ Script semanal buscando recursos huérfanos (Cloud Custodian)</li>
-</ul>
-
-## <span class="text-green-500">Prioridad 2 - Quick Wins (Semana 2-3)</span>
-
-<ul class="text-base mt-4 space-y-2">
-  <li>☐ Lifecycle policies: ECR, S3, snapshots, modelos</li>
-  <li>☐ Auto-shutdown en notebooks y GPUs (2h sin actividad)</li>
-  <li>☐ Auditar recursos con utilización &lt;20% durante 7+ días</li>
-</ul>
-<div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
-  Recomendaciones
-</div>
----
-
-# "¿Y ahora qué hago?"
-
-## <span class="text-green-500">Prioridad 3 - Arquitectura (Mes 1-2)</span>
-
-<ul class="text-base mt-4 space-y-2">
-  <li>☐ VPC endpoints para servicios AWS de alto tráfico</li>
-  <li>☐ Revisar qué está desplegado multi-AZ. ¿Realmente necesita HA?</li>
-  <li>☐ Política de retención de modelos ML basada en uso real</li>
-</ul>
-<div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
-  Recomendaciones
-</div>
----
-
-# <span class="text-green-500">ROI esperado</span>
-
-| Acción | Ahorro |
-|--------|--------|
-| Rightsizing | <span class="text-green-500">20-40% instancias</span> |
-| Auto-shutdown GPUs | <span class="text-green-500">60-80% compute</span> |
-| Lifecycle policies | <span class="text-green-500">40-60% storage<br>(80% en ejemplo real)</span> |
-| VPC endpoints | <span class="text-green-500">Hasta 90% NAT</span> |
-<div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
-  Recomendaciones
-</div>
----
-
-# Herramientas que <span class="inline-block bg-black text-white px-2 py-1">ayudan</span>
-
-<div class="mt-6">
-  <h3 class="text-green-500">Nativas:</h3>
-  <p>AWS Cost Explorer, Azure Cost Management, CloudWatch/Azure Monitor</p>
   
-  <h3 class="text-green-500 mt-4">Open Source:</h3>
-  <p>Cloud Custodian (políticas), Infracost (Terraform), Opencost (Kubernetes)</p>
-  
+  <div class="mt-8">
+    <div class="p-4 bg-green-50 border-l-4 border-green-500 rounded text-center">
+      <p class="text-xl font-semibold text-gray-800">No todo necesita multi-AZ, y no todos los providers cobran igual</p>
+    </div>
+  </div>
 </div>
+
+<div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
+  NETWORKING
+</div>
+
+---
+
+
+
+<div class="text-center mb-6">
+  <h1 class="text-4xl font-light tracking-widest text-black mb-2">La <span class="inline-block bg-black text-white px-2 py-1">solución</span></h1>
+</div>
+
+<div class="max-w-4xl mx-auto mt-8">
+  <ul class="text-lg space-y-4 list-none" style="list-style: none; padding-left: 0;">
+    <li style="list-style: none;">✅ <strong>VPC endpoints:</strong> Para servicios AWS (S3, DynamoDB) evitan NAT Gateway y sus costes.</li>
+    <li style="list-style: none;">✅ <strong>Segmentar por criticidad:</strong> Single-AZ para non-prod.</li>
+    <li style="list-style: none;">✅ <strong>Arquitectura consciente:</strong> Misma AZ para ervicios que se comunican mucho.</li>
+    <li style="list-style: none;">✅ <strong>Caching local:</strong> Modelos ML en la instancia, evitar descargas en cada deploy</li>
+    <li style="list-style: none;">✅ <strong>Providers alternativos:</strong> Evaluar pricing de networking según workload</li>
+  </ul>
+
+  <div class="mt-8 p-4 bg-green-50 border-l-4 border-green-500 rounded text-center">
+    <p class="text-xl font-semibold text-gray-800">El mejor tráfico es el que no se genera</p>
+  </div>
+</div>
+<div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
+  NETWORKING
+</div>
+---
+
+<div class="text-center mb-6">
+  <h1 class="text-4xl font-light tracking-widest text-black mb-2">"¿Por dónde empezamos?"</h1>
+</div>
+
+<div class="max-w-6xl mx-auto mt-8">
+  <div class="grid grid-cols-3 gap-6">
+    <div class="p-5 bg-green-50 border-l-4 border-green-500 rounded-lg">
+      <h3 class="text-lg font-semibold mb-3 text-green-700">Prioridad 1</h3>
+      <p class="text-sm text-green-600 mb-4 font-semibold">Visibilidad</p>
+      <ul class="text-sm space-y-2 list-none" style="list-style: none; padding-left: 0;">
+        <li style="list-style: none;">🏷️ Tagging obligatorio</li>
+        <li style="list-style: none;">📊 Cost Explorer y alertas</li>
+        <li style="list-style: none;">🔍 Script recursos huérfanos</li>
+      </ul>
+    </div>
+    
+  <div class="p-5 bg-blue-50 border-l-4 border-blue-500 rounded-lg">
+      <h3 class="text-lg font-semibold mb-3 text-blue-700">Prioridad 2</h3>
+      <p class="text-sm text-blue-600 mb-4 font-semibold">Quick Wins</p>
+      <ul class="text-sm space-y-2 list-none" style="list-style: none; padding-left: 0;">
+        <li style="list-style: none;">♻️ Lifecycle policies</li>
+        <li style="list-style: none;">⏸️ Auto-shutdown GPUs</li>
+        <li style="list-style: none;">📈 Auditar recursos &lt;20%</li>
+      </ul>
+    </div>
+    
+  <div class="p-5 bg-amber-50 border-l-4 border-amber-500 rounded-lg">
+      <h3 class="text-lg font-semibold mb-3 text-amber-700">Prioridad 3</h3>
+      <p class="text-sm text-amber-600 mb-4 font-semibold">Arquitectura</p>
+      <ul class="text-sm space-y-2 list-none" style="list-style: none; padding-left: 0;">
+        <li style="list-style: none;">🔗 VPC endpoints</li>
+        <li style="list-style: none;">🌐 Revisar multi-AZ</li>
+        <li style="list-style: none;">🤖 Retención modelos ML</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
   Recomendaciones
 </div>
 ---
 
+<div class="text-center mb-6">
+  <h1 class="text-4xl font-light tracking-widest text-black mb-2">IMPACTO <span class="inline-block bg-black text-white px-2 py-1">ESPERADO</span></h1>
+</div>
+
+<div class="max-w-5xl mx-auto mt-8">
+  <div class="grid grid-cols-2 gap-6">
+    <div class="p-5 bg-green-50 border-l-4 border-green-500 rounded-lg">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-2xl">📊</span>
+        <h3 class="text-lg font-semibold text-gray-800">Rightsizing</h3>
+      </div>
+      <p class="text-3xl font-bold text-green-600">20-40%</p>
+      <p class="text-sm text-gray-600 mt-1">instancias</p>
+    </div>
+    
+  <div class="p-5 bg-emerald-50 border-l-4 border-emerald-600 rounded-lg">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-2xl">⏸️</span>
+        <h3 class="text-lg font-semibold text-gray-800">Auto-shutdown GPUs</h3>
+      </div>
+      <p class="text-3xl font-bold text-emerald-700">60-80%</p>
+      <p class="text-sm text-gray-600 mt-1">compute</p>
+    </div>
+    
+  <div class="p-5 bg-emerald-50 border-l-4 border-emerald-600 rounded-lg">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-2xl">♻️</span>
+        <h3 class="text-lg font-semibold text-gray-800">Lifecycle policies</h3>
+      </div>
+      <p class="text-3xl font-bold text-emerald-700">40-60%</p>
+      <p class="text-sm text-gray-600 mt-1">storage</p>
+    </div>
+    
+  <div class="p-5 bg-emerald-50 border-l-4 border-emerald-600 rounded-lg">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-2xl">🔗</span>
+        <h3 class="text-lg font-semibold text-gray-800">VPC endpoints</h3>
+      </div>
+      <p class="text-3xl font-bold text-emerald-700">Hasta 90%</p>
+      <p class="text-sm text-gray-600 mt-1">NAT</p>
+    </div>
+  </div>
+</div>
+
+<div class="mt-6 text-center text-sm uppercase tracking-wide opacity-60">
+  Recomendaciones
+</div>
+---
 # <span class="text-green-500">La regla de oro</span>
 
 <div class="p-4 bg-green-50 border-l-4 border-green-500 rounded text-xl">
@@ -600,11 +634,14 @@ css: styles.css
 
 
 
-<div class="mt-16 flex flex-col items-center justify-center space-y-8">
-  <div class="text-6xl font-bold">GRACIAS</div>
+<div class="h-full flex flex-col items-center justify-center space-y-12">
+  <div>
+    <h1 class="text-6xl font-bold tracking-widest text-black mb-4">¡GRACIAS!</h1>
+  </div>
   
-  <div class="mt-8">
-    <p class="text-xl mb-4">Accede a las slides</p>
-    <img src="/images/recycle.jpg" alt="QR Code para slides" class="w-64 h-64 mx-auto border-2 border-black rounded-lg p-4 bg-white">
+  <div class="flex flex-col items-center">
+    <p class="text-xl mb-6 font-semibold text-gray-700">Accede a las slides</p>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://pluto-star-3.resiz.es/" alt="QR Code para slides" class="w-64 h-64 mx-auto border-2 border-black rounded-lg p-4 bg-white shadow-lg">
+    <p class="text-sm text-gray-500 mt-4 font-mono">pluto-star-3.resiz.es</p>
   </div>
 </div>
