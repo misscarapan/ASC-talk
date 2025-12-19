@@ -143,10 +143,10 @@ css: styles.css
 
 <div class="grid grid-cols-5 gap-6 mt-6">
   <div class="col-span-3 flex justify-center items-center">
-    <img src="/images/costura.jpg" alt="Costura" class="h-64 w-full object-contain rounded-sm shadow-xl border border-gray-200">
+    <img src="/images/costura.jpg" alt="Costura" class="h-64 w-full object-contain">
   </div>
   <div class="col-span-2 flex justify-center items-center">
-    <img src="/images/rightsizing.png" alt="Rightsizing diagram" class="h-64 w-full object-contain rounded-sm shadow-xl border border-gray-200">
+    <img src="/images/rightsizing.png" alt="Rightsizing diagram" class="h-64 w-full object-contain">
   </div>
 </div>
 
@@ -347,17 +347,25 @@ css: styles.css
 ---
 
 <div class="text-center mb-6">
-  <h1 class="text-4xl font-light tracking-widest" style="color: #6B4E3D;">Modelos y embeddings sin control</h1>
+  <h1 class="text-4xl font-light tracking-widest text-black mb-2">Modelos y embeddings sin control</h1>
+  <p class="text-3xl text-gray-600 font-light italic mt-3"><span class="inline-block bg-gray-800 text-white px-2 py-1">El museo moderno</span></p>
 </div>
 
-<div class="max-w-3xl mx-auto mt-12">
-  <h2 class="text-2xl font-semibold mb-6 text-center" style="color: #7A5F4A;"><span class="inline-block text-white px-2 py-1" style="background-color: #6B4E3D;">El museo moderno</span></h2>
-  <ul class="text-lg space-y-4 list-none text-left" style="list-style: none; padding-left: 0;">
-    <li style="list-style: none; color: #5A4A3F;">📦 50 versiones de un modelo, solo usa la última en producción</li>
-    <li style="list-style: none; color: #8B4A3A; font-weight: 600;">💾 250GB que nadie necesita</li>
-    <li style="list-style: none; color: #5A4A3F;">🔗 Embeddings almacenados "por si cambiamos de estrategia"</li>
-    <li style="list-style: none; color: #5A4A3F;">📊 Datasets duplicados entre proyectos</li>
-  </ul>
+<div class="max-w-5xl mx-auto mt-8">
+  <div class="grid grid-cols-2 gap-6">
+    <div class="flex justify-center items-center">
+      <img src="/images/modern.jpg" alt="Modelos sin control" class="h-64 object-contain rounded">
+    </div>
+    
+  <div class="flex flex-col justify-center">
+      <ul class="text-lg space-y-4 list-none text-left" style="list-style: none; padding-left: 0;">
+        <li style="list-style: none; color: #4B5563;">📦 50 versiones de un modelo, solo usa la última en producción</li>
+        <li style="list-style: none; color: #111827; font-weight: 600;">💾 250GB que nadie necesita</li>
+        <li style="list-style: none; color: #4B5563;">🔗 Embeddings almacenados "por si cambiamos de estrategia"</li>
+        <li style="list-style: none; color: #4B5563;">📊 Datasets duplicados entre proyectos</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 
